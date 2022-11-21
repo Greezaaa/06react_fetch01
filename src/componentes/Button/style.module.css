@@ -1,0 +1,19 @@
+.btn {
+    padding: 1em;
+    border:2px solid transparent;
+    transition: all 300ms ease;
+}
+
+.btn:hover {
+    border-bottom:2px solid #333 ;
+}
+.brn_Load {
+    margin: 2rem auto 1rem;
+}
+.btn_Prev{
+    background-color: lightcoral;
+}
+
+.btn_Next{
+    background-color: lightseagreen;
+}

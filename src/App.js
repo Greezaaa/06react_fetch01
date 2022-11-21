@@ -38,11 +38,20 @@ function App() {
       <Header />
       {data != undefined ?
         <>
-          <Button  eleClass={"btn_Prev"} func={() => loadPrev()} link={API} btnText={"Load Prev"} />
-          <Button  eleClass={"btn_Next"} func={() => loadNext()} link={API} btnText={"Load Next"} />
+          <Button eleClass={"btn_Prev"} func={() => loadPrev()} link={API} btnText={"Load Prev"} />
+          <Button eleClass={"btn_Next"} func={() => loadNext()} link={API} btnText={"Load Next"} />
         </>
-        : <></> }
-      {data != undefined ? <Main data={data.results} /> : <Button eleClass={"btn_Load"} func={loadData} link={API} btnText={"Cargar personajes"} />}
+        : <></>}
+      {data != undefined ?
+        <Main data={data.results} /> :
+        <>
+          <p className='about'>
+            What is this?
+            The Rick and Morty API is a REST(ish) and GraphQL API based on the television show Rick and Morty. You will have access to about hundreds of characters, images, locations and episodes. The Rick and Morty API is filled with canonical information as seen on the TV show.
+          </p>
+          <Button eleClass={"btn_Load"} func={loadData} link={API} btnText={"Cargar personajes"} />
+        </>
+      }
     </div>
   );
 }
